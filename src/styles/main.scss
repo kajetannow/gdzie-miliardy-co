@@ -1,0 +1,299 @@
+$fonts: "Spartan", sans-serif;
+
+$white: #F0F0F0;
+$grey: #323232;
+$grey-bg: #252525;
+$green: #71CC35;
+$red: #E0472D;
+/*
+$title: 5.653em;
+$h1: 2.827em;
+$h2: 1.999em;
+$h3: 1.414em;
+$p: 1em;
+$sm: 0.707em;
+$xs: 0.354em;
+$xxs: 0.25em;
+*/
+/*$h1: 2.441rem;
+$h2: 1.953em;
+$h3: 1.563em;*/
+$title: 5.653em;
+$h1: 1.953em;
+$h2: 1.563em;
+$h3: 1.25em;
+$p: 1em;
+$sm: 0.8em;
+$xs: 0.354em;
+$xxs: 0.25em;
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 67%;
+    overflow-x: hidden;
+}
+body{
+    font-family: $fonts;
+    background-color: $white;
+    color: $grey;
+    font-weight: 600;
+    width: 100vw;
+    overflow-x: hidden;
+}
+h1{
+    font-size: $h1;
+    font-weight: 600;
+}
+h2{
+    font-size: $h2;
+    font-weight: 600;
+}
+h3{
+    font-size: $h3;
+    font-weight: 600;
+}
+
+a{
+    color: inherit;
+    font-style: italic;
+    &:hover{
+        font-weight: 600;
+    }
+}
+
+main{
+    //padding: 4.17vh 8.33vw;
+    padding: 4.17vh 0 0;
+}
+
+.number-headline{
+    font-size: $title;
+    color: $red;
+    //padding: 0 8.33vw;
+    margin-bottom: 6.25vh;
+    font-weight: 700;
+    transform: rotate(-1deg);
+}
+
+section{
+    min-height: 100vh;
+    padding-bottom: 16.67vh;
+}
+
+.start{
+    padding: 0 8.33vw 8.33vh;
+    p{
+        font-size: $h1;
+        max-width: 28ch;
+        margin-bottom: 6.25vh;
+    }
+}
+
+.concept{
+    &__headline{
+        margin-left: 8.33vw;
+        padding: $p 8.33vw $p 0;
+        border-top: $grey solid $sm;
+        //border-bottom: $grey solid $sm;
+    }
+    &__content{
+        margin-top: 8.33vh;
+        padding: 0 8.33vw;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__img-div{
+        img, svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__more-div{
+        padding: 4vh 8.33vw 0;
+        text-align: right;
+    }
+    &__details{
+        z-index: 420;
+        position: absolute;
+        color: $white;
+        background-color: $grey;
+        margin: 2vh 0 2vh 8.33vw;
+        padding: 2vh 8.33vw;
+        width: 83.34vw;
+        p{
+            font-weight: 400;
+            margin: $sm 0;
+        }
+        button{
+            color: $white;
+        }
+        &__show{
+            display: block;
+            opacity: 1;
+            animation-name: fadeIn;
+            animation-timing-function: ease-out;
+            animation-duration: 0.5s;
+        }
+        &__hide{
+            display: none;
+            opacity: 0;
+            animation-name: fadeOut;
+            animation-timing-function: ease-in;
+            animation-duration: 4s;
+        }
+    }
+}
+
+.about-ets{
+    color: $white;
+    background-color: $grey-bg;
+    padding: 0 16.67vw 8.33vh;
+    h1{
+        padding: 6.25vh 0;
+    }
+    p{
+        font-size: $h2;
+        max-width: 35ch;
+        line-height: 1.3;
+        margin-bottom: 6.25vh;
+        font-weight: 400;
+    }
+}
+
+.what-you-can{
+    padding: 0 16.67vw 8.33vh;
+    h1{
+        color: $red;
+        padding: 6.25vh 0;
+    }
+    p{
+        font-size: $h2;
+        max-width: 35ch;
+        line-height: 1.3;
+        margin-bottom: 4.16vh;
+        font-weight: 500;
+    }
+}
+
+.about{
+    color: $white;
+    background-color: $grey-bg;
+    padding: 8.33vh 16.67vw;
+    p{
+        font-size: $h2;
+        max-width: 35ch;
+        line-height: 1.3;
+        margin: 3vh 0;
+        font-weight: 500;
+    }
+    &__socials{
+        img, svg{
+            width: 2vw;
+            height: auto;
+        }
+        //display: flex;
+        //justify-content: space-around;
+    }
+}
+
+footer{
+    color: $white;
+    background-color: $grey-bg;
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 1vh;
+}
+
+.what-you-can, .about{
+    min-height: 60vh;
+} 
+
+.green{
+    color: $green;
+}
+.red{
+    color: $red;
+}
+
+button{
+    font-family: $fonts;
+    color: $grey;
+    border: none;
+    background-color: inherit;
+    &:focus, &:active, &:hover{
+        font-weight: 600;
+    }
+    border-top: $grey solid $xxs;
+    //border-bottom: $grey solid $xxs;
+    padding: $xs;
+    font-size: $p;
+}
+@media (min-width: 460px) {
+    .number-headline{
+        font-size: 8em;
+    }
+}
+
+
+@media (min-width: 768px) {
+    html{
+        font-size: 80%;
+    }
+    .number-headline{
+        font-size: 11.302em;
+    }
+    .concept{
+        &__content{
+            flex-direction: row;
+        }
+        &__img-div{
+            width: 50%;
+        }
+        &__text-div{
+            width: 40%;
+        }
+    }
+    h2{
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 1100px) {
+    html{
+        font-size: 90%;
+    }
+}
+
+@media (min-width: 1425px) {
+    html{
+        font-size: 100%;
+    }
+    .number-headline{
+        text-align: right;
+        position: relative;
+        right: -16.67vw;
+        transform: rotate(-2deg);
+    }
+}

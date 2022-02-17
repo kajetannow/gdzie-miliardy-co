@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-      title: `25mld.pl`,
+      title: `gdziemiliardy.co`,
     siteUrl: `https://www.yourdomain.tld`
   },
+  pathPrefix: "/gdzie-miliardy-co",
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-react-helmet"]
 };
