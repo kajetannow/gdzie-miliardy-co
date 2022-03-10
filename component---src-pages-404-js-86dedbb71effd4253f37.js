@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgdziemiliardy_co=self.webpackChunkgdziemiliardy_co||[]).push([[883],{429:function(n,i,e){e.r(i),e.d(i,{default:function(){return u}});e(294);function u(){return"undefined"!=typeof window&&(window.location="/"),null}}}]);
+//# sourceMappingURL=component---src-pages-404-js-86dedbb71effd4253f37.js.map
